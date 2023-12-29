@@ -3,16 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="" type="image/icon type">
+    <title>Devgil</title>
+    <link rel="icon" href="./public/LOGO.png" type="image/icon type">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Victor+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <link rel="stylesheet" href="output.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <script>document.documentElement.classList.add('js')</script>
+    <link href="output.css" rel="stylesheet">
+    <style>
+ /* styles.css */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff0000;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+    </style>
 </head>
 <body class="relative h-full">
+
+  <!-- home page -->
   <div>
     <div class="fixed inset-0 z-50 w-full h-full loader opacity-90">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 66" height="100px" width="100px" class="spinner">
@@ -77,16 +106,16 @@
               <ul class="flex flex-col p-4 mt-4 font-medium border rounded-lg md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <!-- Navigation Links -->
                 <li class="hover:text-[#ff3939] text-white">
-                    <a href="./index.html">Home</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li class="hover:text-[#ff3939] text-white">
-                    <a href="./about.html">About</a>
+                    <a href="#about">About</a>
                 </li>
                 <li class="hover:text-[#ff3939] text-white">
-                    <a href="./projects.html">Projects</a>
+                    <a href="#projects">Projects</a>
                 </li>
                 <li class="hover:text-[#ff3939] text-white">
-                    <a href="./contact.html">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
             
@@ -100,18 +129,18 @@
         <!-- Mobile Navigation Menu -->
         <div class="md:hidden" id="mobileMenu" style="display: none;">
             <ul class="flex flex-col items-center justify-center p-4 mt-4 font-medium border rounded-lg md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                <li class="hover:text-[#ff3939] {{ request()->routeIs('index') ? 'text-[#ff3939]' : 'text-white' }}">
-                    <a href="{{ route('index') }}">Home</a>
-                </li>
-                <li class="hover:text-[#ff3939] {{ request()->routeIs('about.about') ? 'text-[#ff3939]' : 'text-white' }}">
-                    <a href="{{ route('about.about') }}">About</a>
-                </li>
-                <li class="hover:text-[#ff3939] {{ request()->routeIs('projects.index') ? 'text-[#ff3939]' : 'text-white' }}">
-                    <a href="{{ route('projects.index') }}">Projects</a>
-                </li>
-                <li class="hover:text-[#ff3939] {{ request()->routeIs('contact.index') ? 'text-[#ff3939]' : 'text-white' }}">
-                    <a href="{{ route('contact.index') }}">Contact</a>
-                </li>
+              <li class="hover:text-[#ff3939] text-white">
+                <a href="#home">Home</a>
+            </li>
+            <li class="hover:text-[#ff3939] text-white">
+                <a href="#about">About</a>
+            </li>
+            <li class="hover:text-[#ff3939] text-white">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="hover:text-[#ff3939] text-white">
+                <a href="#contact">Contact</a>
+            </li>
                 <div class="">
                     <button id="buttonlogin">
                         Login
@@ -128,7 +157,7 @@
         </script>
     </nav>
     
-    <div  class="lg:h-full lg:pt-[69px] sm:pt-[58px]">
+    <div id="home" class="lg:h-full lg:pt-[69px] sm:pt-[58px]">
         <header class="relative bg-gray-900 w-full h-[600px]">
     
           <div class="slideshow-container">
@@ -137,7 +166,7 @@
               <div class="mySlides fade">
                   <img class="w-full h-[600px] opacity-30" src="./public/bg1.jpeg" alt="Image">
                   <div class="absolute text-white transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                      <p class="font-bold lg:text-6xl sm:text-4xl lg:w-[1000px] text-center">Welcome to my Portfolio</p>
+                      <p class="font-bold lg:text-6xl sm:text-4xl lg:w-[1000px] text-center animate__animated animate__fadeInUp">Welcome to my Portfolio</p>
                   </div>
               </div>
           </div>
@@ -146,7 +175,7 @@
             <div class="mySlides fade">
               <img class="w-full h-[600px] opacity-30" src="./public/bg2.jpeg">
               <div class="absolute text-white transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                <p class="font-bold lg:text-6xl sm:text-4xl lg:w-[1000px] text-center">Hello, I'am Jeril , Focusing on Functional Elements Creating Beautiful Design Experience.</p>
+                <p class="font-bold lg:text-6xl sm:text-4xl lg:w-[1000px] text-center animate__animated animate__fadeInUp">Hello, I'am Jeril , Focusing on Functional Elements Creating Beautiful Design Experience.</p>
                   </div>
             </div>
             </div>
@@ -210,7 +239,7 @@
     
           <section class="bg-white dark:bg-gray-900">
             <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-                <div class="mr-auto place-self-center lg:col-span-7">
+                <div class="mr-auto place-self-center lg:col-span-7 delay-[300ms] duration-[600ms] taos:translate-x-[-50px] taos:opacity-0" data-taos-offset="400">
                     <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">About Me</h1>
                     <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">I'm Jeril, and I really want to do front-end development. I have experience using HTML, CSS, JavaScript, Tailwind, Laravel, Livewire, Rappasoft PowerGrid, animation, Bootstrap, Figma, and I can also work on network-related tasks.</p>
                     <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
@@ -241,16 +270,16 @@
                     </script>
                 </div>
                 <div class="flex pt-2 lg:mt-0 lg:col-span-5 sm:justify-center">
-                    <img src="./public/profile.png" alt="mockup">
+                    <img src="./public/profile.png" class="delay-[300ms] duration-[600ms] taos:translate-x-[50px] taos:opacity-0" data-taos-offset="400">
                 </div>
             </div>
         </section>
     
         <section>
-            <div class="p-2 bg-white">
+            <div class="p-2 bg-white delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset="300">
                 <p class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">Project Comply</p>
             </div>
-        <div class="grid gap-2 bg-white lg:grid-cols-4 sm:grid-rows-1 p-7">
+        <div class="grid gap-2 bg-white lg:grid-cols-4 sm:grid-rows-1 p-7 delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset="300">
             <div class="flex items-center justify-center">
                 <button class="card" id="cards">
                     <div class="card-info">
@@ -356,6 +385,1416 @@
     
     
     </div>
+
+    <!-- home page end  -->
+
+
+
+
+
+
+
+
+    <!-- about  -->
+    <div id="about" class="h-full pt-[69px]">
+      <section class="bg-white dark:bg-gray-900">
+          <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6 delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset="300">
+              <figure class="max-w-screen-md mx-auto">
+                  <blockquote>
+                      <p class="text-2xl font-medium text-gray-900 dark:text-white"> I'm a front end developer with 1 year of experience in web development. I've worked on a variety of projects for clients in the Students. I'm passionate about creating great user experiences and have a strong understanding of usability and accessibility standards.</p>
+              </figure>
+          </div>
+        </section>
+      
+        <!-- component -->
+      
+          <div class="grid grid-cols-1 md:grid-cols-2 delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset="300">
+            <div class="">
+              <img class="object-cover object-top h-full " src="./public/seller.jpg" alt="">
+            </div>
+            <div class="flex p-10 bg-gray-100">
+              <div class="max-w-lg mt-auto mb-auto">
+                <h1 class="text-3xl uppercase">Jeril GIl A, Labagnoy</h1>
+                <p class="mb-5 font-semibold">Front-end Developer</p>
+                <p>"Hello, have a nice day! and I offer website development services. You can contact me, and we can discuss and agree on the pricing. I also provide computer repair services. Additionally, I have various technologies for sale, so you can explore them on my websites. Thank you for visiting my portfolio. Feel free to hire me for your job offers."</p>
+                <button class="py-3 mt-6 text-white bg-black rounded-md px-7">Email Me</button>
+              </div>
+            </div>
+          </div>
+      
+                  <div class="flex items-center justify-center w-full mb-10 bg-gray-900 mt-28 profile-skills">
+                      <div class="hidden w-4/12 h-52 md:flex sm:flex delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,200px,0)] taos:opacity-0" data-taos-offset="300">
+                          <p class="font-mono text-lg font-bold text-white">Here, you can see all the progress of my skills. If you have any questions, you can contact me through my email. Thank you.</p>
+                        </div>
+                      <div class="delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0" data-taos-offset="400">
+                          <input type="checkbox" id="sk1">
+                          <label for="sk1"></label>
+                          <ul class="skills skills1">
+                              <li class="sk-cms"><span>CMS</span></li>
+                              <li class="sk-dtb"><span>DDBB</span></li>
+                              <li class="sk-dis"><span>Design</span></li>
+                              <li class="sk-pro"><span>Programing</span></li>
+                              <li class="sk-ani"><span>Animation</span></li>
+                              <li class="more">
+                                  <input type="checkbox" id="more-con"><label for="more-con"></label>
+                                  <div><span>PHOTO</span><span>API</span><span>MAPS</span><span>VIDEO</span><span>CHARTS</span><span>RWD</span></div>
+                              </li>
+                          </ul>
+                      </div>
+      
+                      <div class="delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0" data-taos-offset="400">
+                      <input type="checkbox" id="sk2">
+                      <label for="sk2"></label>
+                      <ul class="skills skills2">
+                          <li class="sk-gim"><span>Gimp</span></li>
+                          <li class="sk-ado"><span>Adobe&nbsp;CC</span></li>
+                          <li class="sk-not"><span>Notepad++</span></li>
+                          <li class="sk-tri"><span>Tridion</span></li>
+                          <li class="sk-wor"><span>Wordpress</span></li>
+                          <li class="more">
+                              <input type="checkbox" id="more-pro"><label for="more-pro"></label>
+                              <div><span>JOOMLA</span><span>DRUPAL</span><span>JIRA</span><span>TRELLO</span><span>FILEZILLA</span><span>GIT</span></div>
+                          </li>
+                      </ul>
+                      </div>
+      
+                      <div class="delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0" data-taos-offset="400">
+                      <input type="checkbox" id="sk3">
+                      <label for="sk3"></label>
+                      <ul class="skills skills3">
+                          <li class="sk-css"><span>CSS</span></li>
+                          <li class="sk-htm"><span>HTML</span></li>
+                          <li class="sk-jav"><span>JS</span></li>
+                          <li class="sk-php"><span>PHP</span></li>
+                          <li class="sk-sql"><span>SQL</span></li>
+                          <li class="more">
+                              <input type="checkbox" id="more-len"><label for="more-len"></label>
+                              <div><span>XHTML</span><span>XSL</span><span>XML</span><span>JSON</span><span>PUG</span><span>SASS</span></div>
+                          </li>
+                      </ul>
+                      </div>
+                  </div>
+ 
+                  <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('skillDisplay', () => ({
+            skills: [{
+                    'title': 'HTML',
+                    'percent': '95',
+                },
+                {
+                    'title': 'CSS',
+                    'percent': '70',
+                },
+                {
+                    'title': 'Tailwind CSS',
+                    'percent': '90',
+                },
+                {
+                    'title': 'JavaScript',
+                    'percent': '70',
+                },
+                {
+                    'title': 'Alpine JS',
+                    'percent': '80',
+                }, {
+                    'title': 'PHP',
+                    'percent': '65',
+                }, {
+                    'title': 'Laravel',
+                    'percent': '75',
+                }
+            ],
+            currentSkill: {
+                'title': 'HTML',
+                'percent': '95',
+            }
+        }));
+    });
+</script>
+
+      </div>
+      
+    <!-- about end  -->
+
+
+    <!-- projects  -->
+    <div id="projects" class="h-full pt-[69px]">
+      <section class="bg-white dark:bg-gray-900 delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset="300">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+          <div class="max-w-screen-sm mx-auto mb-8 lg:mb-16">
+              <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">My Projects</h2>
+              <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Explore the whole collection of my open-source web templates and elements built with the utility classes from Tailwind css javascript laravel structure</p>
+          </div>
+
+          <div class="grid gap-8 lg:gap-16 sm:grid-rows-1 md:grid-cols-3 lg:grid-cols-5 sm:place-items-center">
+            <div class="text-center text-gray-500 dark:text-gray-400">
+              <div class="main">
+                  <div class="cardp">
+                    <div class="fl">
+                      <div class="fullscreen">
+                        <svg viewBox="0 0 100 100" class="fullscreen_svg"><path d="M3.563-.004a3.573 3.573 0 0 0-3.527 4.09l-.004-.02v28.141c0 1.973 1.602 3.57 3.57 3.57s3.57-1.598 3.57-3.57V12.218v.004l22.461 22.461a3.571 3.571 0 0 0 6.093-2.527c0-.988-.398-1.879-1.047-2.523L12.218 7.172h19.989c1.973 0 3.57-1.602 3.57-3.57s-1.598-3.57-3.57-3.57H4.035a3.008 3.008 0 0 0-.473-.035zM96.333 0l-.398.035.02-.004h-28.16a3.569 3.569 0 0 0-3.57 3.57 3.569 3.569 0 0 0 3.57 3.57h19.989L65.323 29.632a3.555 3.555 0 0 0-1.047 2.523 3.571 3.571 0 0 0 6.093 2.527L92.83 12.221v19.985a3.569 3.569 0 0 0 3.57 3.57 3.569 3.569 0 0 0 3.57-3.57V4.034v.004a3.569 3.569 0 0 0-3.539-4.043l-.105.004zM3.548 64.23A3.573 3.573 0 0 0 .029 67.8v28.626-.004l.016.305-.004-.016.004.059v-.012l.039.289-.004-.023.023.121-.004-.023c.074.348.191.656.34.938l-.008-.02.055.098-.008-.02.148.242-.008-.012.055.082-.008-.012c.199.285.43.531.688.742l.008.008.031.027.004.004c.582.461 1.32.742 2.121.762h.004l.078.004h28.61a3.569 3.569 0 0 0 3.57-3.57 3.569 3.569 0 0 0-3.57-3.57H12.224l22.461-22.461a3.569 3.569 0 0 0-2.492-6.125l-.105.004h.008a3.562 3.562 0 0 0-2.453 1.074L7.182 87.778V67.793a3.571 3.571 0 0 0-3.57-3.57h-.055.004zm92.805 0a3.573 3.573 0 0 0-3.519 3.57v19.993-.004L70.373 65.328a3.553 3.553 0 0 0-2.559-1.082h-.004a3.573 3.573 0 0 0-3.566 3.57c0 1.004.414 1.91 1.082 2.555l22.461 22.461H67.802a3.57 3.57 0 1 0 0 7.14h28.606c.375 0 .742-.059 1.082-.168l-.023.008.027-.012-.02.008.352-.129-.023.008.039-.02-.02.008.32-.156-.02.008.023-.016-.008.008c.184-.102.34-.207.488-.32l-.008.008.137-.113-.008.004.223-.211.008-.008c.156-.164.301-.34.422-.535l.008-.016-.008.016.008-.02.164-.285.008-.02-.008.016.008-.02c.098-.188.184-.406.246-.633l.008-.023-.004.008.008-.023a3.44 3.44 0 0 0 .121-.852v-.004l.004-.078V67.804a3.569 3.569 0 0 0-3.57-3.57h-.055.004z"></path></svg>
+                      </div>
+                    </div>
+                    <div class="card_content">
+                      <label class="switch_738">
+                        <input type="checkbox" class="chk_738">
+                        <span class="slider_738"></span>
+                      </label>
+                    </div>
+                    <div class="card_back"></div>
+                  </div>
+                  <div class="data">
+                    <div class="img">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 80 80">
+                      <g stroke-width="2.00" fill="none" stroke-linecap="butt">
+                      <path stroke="#59afb1" d="M 14.06 0.00
+                        Q 13.33 4.09 13.93 7.52
+                        A 1.04 1.02 -78.7 0 0 14.37 8.19
+                        L 32.87 20.19"></path>
+                      <path stroke="#4fa6a8" d="M 32.87 20.19
+                        L 42.25 26.79"></path>
+                      <path stroke="#69cbc0" d="M 42.25 26.79
+                        C 41.40 28.26 24.14 34.92 21.32 36.20"></path>
+                      <path stroke="#6fcdbb" d="M 21.32 36.20
+                        Q 15.81 38.21 11.00 41.21"></path>
+                      <path stroke="#5ec8ab" d="M 11.00 41.21
+                        L 9.75 40.96"></path>
+                      <path stroke="#5cae9e" d="M 9.75 40.96
+                        Q 5.99 37.71 1.71 35.19
+                        A 1.00 1.00 0.0 0 0 0.22 35.85
+                        L 0.00 36.94"></path>
+                      <path stroke="#3190a6" d="M 79.95 6.12
+                        L 62.46 11.32"></path>
+                      <path stroke="#3a96a3" d="M 62.46 11.32
+                        Q 47.42 14.67 32.87 20.19"></path>
+                      <path stroke="#22a3be" d="M 80.00 11.06
+                        L 64.50 17.46"></path>
+                      <path stroke="#28879d" d="M 64.50 17.46
+                        L 62.46 11.32"></path>
+                      <path stroke="#2ba9bb" d="M 64.50 17.46
+                        L 43.00 26.96"></path>
+                      <path stroke="#4ab2b2" d="M 43.00 26.96
+                        L 42.25 26.79"></path>
+                      <path stroke="#45ced3" d="M 80.00 52.31
+                        Q 71.64 45.91 62.46 40.67"></path>
+                      <path stroke="#13636e" d="M 62.46 40.67
+                        Q 62.43 36.88 58.50 36.79"></path>
+                      <path stroke="#45ced3" d="M 58.50 36.79
+                        Q 50.07 32.95 43.00 26.96"></path>
+                      <path stroke="#326b65" d="M 58.50 36.79
+                        Q 55.85 40.04 56.86 44.07
+                        C 57.53 46.71 60.02 47.68 61.77 45.19
+                        Q 61.91 44.99 61.94 44.74
+                        L 62.46 40.67"></path>
+                      <path stroke="#59d4b5" d="M 40.81 79.86
+                        Q 46.22 74.94 52.34 70.94
+                        A 1.00 1.00 0.0 0 0 52.39 69.30
+                        Q 44.74 63.65 43.10 62.62
+                        Q 34.11 56.98 32.50 55.79"></path>
+                      <path stroke="#6ad8c5" d="M 32.50 55.79
+                        C 36.74 55.42 30.64 48.79 29.79 47.81
+                        C 27.54 45.21 26.34 42.09 24.05 39.44
+                        Q 22.66 37.82 21.32 36.20"></path>
+                      <path stroke="#326b65" d="M 48.75 39.07
+                        A 2.30 2.30 0.0 0 0 46.45 36.77
+                        L 46.05 36.77
+                        A 2.30 2.30 0.0 0 0 43.75 39.07
+                        L 43.75 44.21
+                        A 2.30 2.30 0.0 0 0 46.05 46.51
+                        L 46.45 46.51
+                        A 2.30 2.30 0.0 0 0 48.75 44.21
+                        L 48.75 39.07"></path>
+                      <path stroke="#326b65" d="M 58.63 54.41
+                        C 54.90 57.18 50.72 56.87 46.91 54.39
+                        A 1.00 0.99 51.9 0 0 46.04 54.28
+                        C 42.37 55.52 43.88 58.13 46.28 59.41
+                        Q 53.38 63.20 60.15 58.94
+                        C 62.54 57.43 62.47 54.80 59.41 54.23
+                        A 1.00 1.00 0.0 0 0 58.63 54.41"></path>
+                      <path stroke="#4bb793" d="M 9.75 40.96
+                        Q 5.15 43.50 0.05 44.46"></path>
+                      <path stroke="#5fd6b0" d="M 32.50 55.79
+                        L 11.00 41.21"></path>
+                      <path stroke="#48d08e" d="M 11.19 80.00
+                        Q 12.51 79.61 11.57 78.67
+                        Q 5.99 73.11 1.70 65.70
+                        C 1.28 64.97 0.74 64.76 0.00 65.19"></path>
+                      </g>
+                      <path fill="#6ebfb6" d="M 0.00 0.00
+                        L 14.06 0.00
+                        Q 13.33 4.09 13.93 7.52
+                        A 1.04 1.02 -78.7 0 0 14.37 8.19
+                        L 32.87 20.19
+                        L 42.25 26.79
+                        C 41.40 28.26 24.14 34.92 21.32 36.20
+                        Q 15.81 38.21 11.00 41.21
+                        L 9.75 40.96
+                        Q 5.99 37.71 1.71 35.19
+                        A 1.00 1.00 0.0 0 0 0.22 35.85
+                        L 0.00 36.94
+                        L 0.00 0.00
+                        Z"></path>
+                      <path fill="#439eac" d="M 14.06 0.00
+                        L 80.00 0.00
+                        L 79.95 6.12
+                        L 62.46 11.32
+                        Q 47.42 14.67 32.87 20.19
+                        L 14.37 8.19
+                        A 1.04 1.02 -78.7 0 1 13.93 7.52
+                        Q 13.33 4.09 14.06 0.00
+                        Z"></path>
+                      <path fill="#1f81a0" d="M 79.95 6.12
+                        L 80.00 11.06
+                        L 64.50 17.46
+                        L 62.46 11.32
+                        L 79.95 6.12
+                        Z"></path>
+                      <path fill="#308d99" d="M 62.46 11.32
+                        L 64.50 17.46
+                        L 43.00 26.96
+                        L 42.25 26.79
+                        L 32.87 20.19
+                        Q 47.42 14.67 62.46 11.32
+                        Z"></path>
+                      <path fill="#25c5dc" d="M 80.00 11.06
+                        L 80.00 52.31
+                        Q 71.64 45.91 62.46 40.67
+                        Q 62.43 36.88 58.50 36.79
+                        Q 50.07 32.95 43.00 26.96
+                        L 64.50 17.46
+                        L 80.00 11.06
+                        Z"></path>
+                      <path fill="#64d6ca" d="M 42.25 26.79
+                        L 43.00 26.96
+                        Q 50.07 32.95 58.50 36.79
+                        Q 55.85 40.04 56.86 44.07
+                        C 57.53 46.71 60.02 47.68 61.77 45.19
+                        Q 61.91 44.99 61.94 44.74
+                        L 62.46 40.67
+                        Q 71.64 45.91 80.00 52.31
+                        L 80.00 80.00
+                        L 40.81 79.86
+                        Q 46.22 74.94 52.34 70.94
+                        A 1.00 1.00 0.0 0 0 52.39 69.30
+                        Q 44.74 63.65 43.10 62.62
+                        Q 34.11 56.98 32.50 55.79
+                        C 36.74 55.42 30.64 48.79 29.79 47.81
+                        C 27.54 45.21 26.34 42.09 24.05 39.44
+                        Q 22.66 37.82 21.32 36.20
+                        C 24.14 34.92 41.40 28.26 42.25 26.79
+                        Z
+                        M 48.75 39.07
+                        A 2.30 2.30 0.0 0 0 46.45 36.77
+                        L 46.05 36.77
+                        A 2.30 2.30 0.0 0 0 43.75 39.07
+                        L 43.75 44.21
+                        A 2.30 2.30 0.0 0 0 46.05 46.51
+                        L 46.45 46.51
+                        A 2.30 2.30 0.0 0 0 48.75 44.21
+                        L 48.75 39.07
+                        Z
+                        M 58.63 54.41
+                        C 54.90 57.18 50.72 56.87 46.91 54.39
+                        A 1.00 0.99 51.9 0 0 46.04 54.28
+                        C 42.37 55.52 43.88 58.13 46.28 59.41
+                        Q 53.38 63.20 60.15 58.94
+                        C 62.54 57.43 62.47 54.80 59.41 54.23
+                        A 1.00 1.00 0.0 0 0 58.63 54.41
+                        Z"></path>
+                      <path fill="#499c85" d="M 9.75 40.96
+                        Q 5.15 43.50 0.05 44.46
+                        L 0.00 36.94
+                        L 0.22 35.85
+                        A 1.00 1.00 0.0 0 1 1.71 35.19
+                        Q 5.99 37.71 9.75 40.96
+                        Z"></path>
+                      <path fill="#70dac0" d="M 21.32 36.20
+                        Q 22.66 37.82 24.05 39.44
+                        C 26.34 42.09 27.54 45.21 29.79 47.81
+                        C 30.64 48.79 36.74 55.42 32.50 55.79
+                        L 11.00 41.21
+                        Q 15.81 38.21 21.32 36.20
+                        Z"></path>
+                      <rect fill="#000000" x="43.75" y="36.77" width="5.00" height="9.74" rx="2.30"></rect>
+                      <path fill="#000000" d="M 58.50 36.79
+                        Q 62.43 36.88 62.46 40.67
+                        L 61.94 44.74
+                        Q 61.91 44.99 61.77 45.19
+                        C 60.02 47.68 57.53 46.71 56.86 44.07
+                        Q 55.85 40.04 58.50 36.79
+                        Z"></path>
+                      <path fill="#4dd1a0" d="M 9.75 40.96
+                        L 11.00 41.21
+                        L 32.50 55.79
+                        Q 34.11 56.98 43.10 62.62
+                        Q 44.74 63.65 52.39 69.30
+                        A 1.00 1.00 0.0 0 1 52.34 70.94
+                        Q 46.22 74.94 40.81 79.86
+                        L 11.19 80.00
+                        Q 12.51 79.61 11.57 78.67
+                        Q 5.99 73.11 1.70 65.70
+                        C 1.28 64.97 0.74 64.76 0.00 65.19
+                        L 0.05 44.46
+                        Q 5.15 43.50 9.75 40.96
+                        Z"></path>
+                      <path fill="#000000" d="M 46.91 54.39
+                        C 50.72 56.87 54.90 57.18 58.63 54.41
+                        A 1.00 1.00 0.0 0 1 59.41 54.23
+                        C 62.47 54.80 62.54 57.43 60.15 58.94
+                        Q 53.38 63.20 46.28 59.41
+                        C 43.88 58.13 42.37 55.52 46.04 54.28
+                        A 1.00 0.99 51.9 0 1 46.91 54.39
+                        Z"></path>
+                      <path fill="#43ce7c" d="M 11.19 80.00
+                        L 0.00 80.00
+                        L 0.00 65.19
+                        C 0.74 64.76 1.28 64.97 1.70 65.70
+                        Q 5.99 73.11 11.57 78.67
+                        Q 12.51 79.61 11.19 80.00
+                        Z"></path>
+                      </svg>
+                    </div>
+                    <div class="textp">
+                      <div class="text_m">CSS Theme Switch</div>
+                      <div class="text_s">Praashoo7</div>
+                    </div>
+                  </div>
+                  <div class="btns">
+                    <div class="likes">
+                      <svg class="likes_svg" viewBox="-2 0 105 92"><path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path></svg><span class="likes_text">22</span>
+                    </div>
+                    <div class="comments">
+                      <svg class="comments_svg" viewBox="-405.9 238 56.3 54.8" title="Comment"><path d="M-391 291.4c0 1.5 1.2 1.7 1.9 1.2 1.8-1.6 15.9-14.6 15.9-14.6h19.3c3.8 0 4.4-.8 4.4-4.5v-31.1c0-3.7-.8-4.5-4.4-4.5h-47.4c-3.6 0-4.4.9-4.4 4.5v31.1c0 3.7.7 4.4 4.4 4.4h10.4v13.5z"></path></svg><span class="comments_text">12</span>
+                    </div>
+                    <div class="views">
+                      <svg class="views_svg" viewBox="0 0 30.5 16.5" title="Views"><path d="M15.3 0C8.9 0 3.3 3.3 0 8.3c3.3 5 8.9 8.3 15.3 8.3s12-3.3 15.3-8.3C27.3 3.3 21.7 0 15.3 0zm0 14.5c-3.4 0-6.2-2.8-6.2-6.2C9 4.8 11.8 2 15.3 2c3.4 0 6.2 2.8 6.2 6.2 0 3.5-2.8 6.3-6.2 6.3z"></path></svg><span class="views_text">332</span>
+                    </div>
+                  </div>
+                </div>
+          </div>
+
+          <!-- box 2  -->
+            <div class="text-center text-gray-500 dark:text-gray-400">
+              <div class="main">
+                  <div class="cardp">
+                    <div class="fl">
+                      <div class="fullscreen">
+                        <svg viewBox="0 0 100 100" class="fullscreen_svg"><path d="M3.563-.004a3.573 3.573 0 0 0-3.527 4.09l-.004-.02v28.141c0 1.973 1.602 3.57 3.57 3.57s3.57-1.598 3.57-3.57V12.218v.004l22.461 22.461a3.571 3.571 0 0 0 6.093-2.527c0-.988-.398-1.879-1.047-2.523L12.218 7.172h19.989c1.973 0 3.57-1.602 3.57-3.57s-1.598-3.57-3.57-3.57H4.035a3.008 3.008 0 0 0-.473-.035zM96.333 0l-.398.035.02-.004h-28.16a3.569 3.569 0 0 0-3.57 3.57 3.569 3.569 0 0 0 3.57 3.57h19.989L65.323 29.632a3.555 3.555 0 0 0-1.047 2.523 3.571 3.571 0 0 0 6.093 2.527L92.83 12.221v19.985a3.569 3.569 0 0 0 3.57 3.57 3.569 3.569 0 0 0 3.57-3.57V4.034v.004a3.569 3.569 0 0 0-3.539-4.043l-.105.004zM3.548 64.23A3.573 3.573 0 0 0 .029 67.8v28.626-.004l.016.305-.004-.016.004.059v-.012l.039.289-.004-.023.023.121-.004-.023c.074.348.191.656.34.938l-.008-.02.055.098-.008-.02.148.242-.008-.012.055.082-.008-.012c.199.285.43.531.688.742l.008.008.031.027.004.004c.582.461 1.32.742 2.121.762h.004l.078.004h28.61a3.569 3.569 0 0 0 3.57-3.57 3.569 3.569 0 0 0-3.57-3.57H12.224l22.461-22.461a3.569 3.569 0 0 0-2.492-6.125l-.105.004h.008a3.562 3.562 0 0 0-2.453 1.074L7.182 87.778V67.793a3.571 3.571 0 0 0-3.57-3.57h-.055.004zm92.805 0a3.573 3.573 0 0 0-3.519 3.57v19.993-.004L70.373 65.328a3.553 3.553 0 0 0-2.559-1.082h-.004a3.573 3.573 0 0 0-3.566 3.57c0 1.004.414 1.91 1.082 2.555l22.461 22.461H67.802a3.57 3.57 0 1 0 0 7.14h28.606c.375 0 .742-.059 1.082-.168l-.023.008.027-.012-.02.008.352-.129-.023.008.039-.02-.02.008.32-.156-.02.008.023-.016-.008.008c.184-.102.34-.207.488-.32l-.008.008.137-.113-.008.004.223-.211.008-.008c.156-.164.301-.34.422-.535l.008-.016-.008.016.008-.02.164-.285.008-.02-.008.016.008-.02c.098-.188.184-.406.246-.633l.008-.023-.004.008.008-.023a3.44 3.44 0 0 0 .121-.852v-.004l.004-.078V67.804a3.569 3.569 0 0 0-3.57-3.57h-.055.004z"></path></svg>
+                      </div>
+                    </div>
+                    <div class="card_content">
+                      <label class="switch_738">
+                        <input type="checkbox" class="chk_738">
+                        <span class="slider_738"></span>
+                      </label>
+                    </div>
+                    <div class="card_back"></div>
+                  </div>
+                  <div class="data">
+                    <div class="img">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 80 80">
+                      <g stroke-width="2.00" fill="none" stroke-linecap="butt">
+                      <path stroke="#59afb1" d="M 14.06 0.00
+                        Q 13.33 4.09 13.93 7.52
+                        A 1.04 1.02 -78.7 0 0 14.37 8.19
+                        L 32.87 20.19"></path>
+                      <path stroke="#4fa6a8" d="M 32.87 20.19
+                        L 42.25 26.79"></path>
+                      <path stroke="#69cbc0" d="M 42.25 26.79
+                        C 41.40 28.26 24.14 34.92 21.32 36.20"></path>
+                      <path stroke="#6fcdbb" d="M 21.32 36.20
+                        Q 15.81 38.21 11.00 41.21"></path>
+                      <path stroke="#5ec8ab" d="M 11.00 41.21
+                        L 9.75 40.96"></path>
+                      <path stroke="#5cae9e" d="M 9.75 40.96
+                        Q 5.99 37.71 1.71 35.19
+                        A 1.00 1.00 0.0 0 0 0.22 35.85
+                        L 0.00 36.94"></path>
+                      <path stroke="#3190a6" d="M 79.95 6.12
+                        L 62.46 11.32"></path>
+                      <path stroke="#3a96a3" d="M 62.46 11.32
+                        Q 47.42 14.67 32.87 20.19"></path>
+                      <path stroke="#22a3be" d="M 80.00 11.06
+                        L 64.50 17.46"></path>
+                      <path stroke="#28879d" d="M 64.50 17.46
+                        L 62.46 11.32"></path>
+                      <path stroke="#2ba9bb" d="M 64.50 17.46
+                        L 43.00 26.96"></path>
+                      <path stroke="#4ab2b2" d="M 43.00 26.96
+                        L 42.25 26.79"></path>
+                      <path stroke="#45ced3" d="M 80.00 52.31
+                        Q 71.64 45.91 62.46 40.67"></path>
+                      <path stroke="#13636e" d="M 62.46 40.67
+                        Q 62.43 36.88 58.50 36.79"></path>
+                      <path stroke="#45ced3" d="M 58.50 36.79
+                        Q 50.07 32.95 43.00 26.96"></path>
+                      <path stroke="#326b65" d="M 58.50 36.79
+                        Q 55.85 40.04 56.86 44.07
+                        C 57.53 46.71 60.02 47.68 61.77 45.19
+                        Q 61.91 44.99 61.94 44.74
+                        L 62.46 40.67"></path>
+                      <path stroke="#59d4b5" d="M 40.81 79.86
+                        Q 46.22 74.94 52.34 70.94
+                        A 1.00 1.00 0.0 0 0 52.39 69.30
+                        Q 44.74 63.65 43.10 62.62
+                        Q 34.11 56.98 32.50 55.79"></path>
+                      <path stroke="#6ad8c5" d="M 32.50 55.79
+                        C 36.74 55.42 30.64 48.79 29.79 47.81
+                        C 27.54 45.21 26.34 42.09 24.05 39.44
+                        Q 22.66 37.82 21.32 36.20"></path>
+                      <path stroke="#326b65" d="M 48.75 39.07
+                        A 2.30 2.30 0.0 0 0 46.45 36.77
+                        L 46.05 36.77
+                        A 2.30 2.30 0.0 0 0 43.75 39.07
+                        L 43.75 44.21
+                        A 2.30 2.30 0.0 0 0 46.05 46.51
+                        L 46.45 46.51
+                        A 2.30 2.30 0.0 0 0 48.75 44.21
+                        L 48.75 39.07"></path>
+                      <path stroke="#326b65" d="M 58.63 54.41
+                        C 54.90 57.18 50.72 56.87 46.91 54.39
+                        A 1.00 0.99 51.9 0 0 46.04 54.28
+                        C 42.37 55.52 43.88 58.13 46.28 59.41
+                        Q 53.38 63.20 60.15 58.94
+                        C 62.54 57.43 62.47 54.80 59.41 54.23
+                        A 1.00 1.00 0.0 0 0 58.63 54.41"></path>
+                      <path stroke="#4bb793" d="M 9.75 40.96
+                        Q 5.15 43.50 0.05 44.46"></path>
+                      <path stroke="#5fd6b0" d="M 32.50 55.79
+                        L 11.00 41.21"></path>
+                      <path stroke="#48d08e" d="M 11.19 80.00
+                        Q 12.51 79.61 11.57 78.67
+                        Q 5.99 73.11 1.70 65.70
+                        C 1.28 64.97 0.74 64.76 0.00 65.19"></path>
+                      </g>
+                      <path fill="#6ebfb6" d="M 0.00 0.00
+                        L 14.06 0.00
+                        Q 13.33 4.09 13.93 7.52
+                        A 1.04 1.02 -78.7 0 0 14.37 8.19
+                        L 32.87 20.19
+                        L 42.25 26.79
+                        C 41.40 28.26 24.14 34.92 21.32 36.20
+                        Q 15.81 38.21 11.00 41.21
+                        L 9.75 40.96
+                        Q 5.99 37.71 1.71 35.19
+                        A 1.00 1.00 0.0 0 0 0.22 35.85
+                        L 0.00 36.94
+                        L 0.00 0.00
+                        Z"></path>
+                      <path fill="#439eac" d="M 14.06 0.00
+                        L 80.00 0.00
+                        L 79.95 6.12
+                        L 62.46 11.32
+                        Q 47.42 14.67 32.87 20.19
+                        L 14.37 8.19
+                        A 1.04 1.02 -78.7 0 1 13.93 7.52
+                        Q 13.33 4.09 14.06 0.00
+                        Z"></path>
+                      <path fill="#1f81a0" d="M 79.95 6.12
+                        L 80.00 11.06
+                        L 64.50 17.46
+                        L 62.46 11.32
+                        L 79.95 6.12
+                        Z"></path>
+                      <path fill="#308d99" d="M 62.46 11.32
+                        L 64.50 17.46
+                        L 43.00 26.96
+                        L 42.25 26.79
+                        L 32.87 20.19
+                        Q 47.42 14.67 62.46 11.32
+                        Z"></path>
+                      <path fill="#25c5dc" d="M 80.00 11.06
+                        L 80.00 52.31
+                        Q 71.64 45.91 62.46 40.67
+                        Q 62.43 36.88 58.50 36.79
+                        Q 50.07 32.95 43.00 26.96
+                        L 64.50 17.46
+                        L 80.00 11.06
+                        Z"></path>
+                      <path fill="#64d6ca" d="M 42.25 26.79
+                        L 43.00 26.96
+                        Q 50.07 32.95 58.50 36.79
+                        Q 55.85 40.04 56.86 44.07
+                        C 57.53 46.71 60.02 47.68 61.77 45.19
+                        Q 61.91 44.99 61.94 44.74
+                        L 62.46 40.67
+                        Q 71.64 45.91 80.00 52.31
+                        L 80.00 80.00
+                        L 40.81 79.86
+                        Q 46.22 74.94 52.34 70.94
+                        A 1.00 1.00 0.0 0 0 52.39 69.30
+                        Q 44.74 63.65 43.10 62.62
+                        Q 34.11 56.98 32.50 55.79
+                        C 36.74 55.42 30.64 48.79 29.79 47.81
+                        C 27.54 45.21 26.34 42.09 24.05 39.44
+                        Q 22.66 37.82 21.32 36.20
+                        C 24.14 34.92 41.40 28.26 42.25 26.79
+                        Z
+                        M 48.75 39.07
+                        A 2.30 2.30 0.0 0 0 46.45 36.77
+                        L 46.05 36.77
+                        A 2.30 2.30 0.0 0 0 43.75 39.07
+                        L 43.75 44.21
+                        A 2.30 2.30 0.0 0 0 46.05 46.51
+                        L 46.45 46.51
+                        A 2.30 2.30 0.0 0 0 48.75 44.21
+                        L 48.75 39.07
+                        Z
+                        M 58.63 54.41
+                        C 54.90 57.18 50.72 56.87 46.91 54.39
+                        A 1.00 0.99 51.9 0 0 46.04 54.28
+                        C 42.37 55.52 43.88 58.13 46.28 59.41
+                        Q 53.38 63.20 60.15 58.94
+                        C 62.54 57.43 62.47 54.80 59.41 54.23
+                        A 1.00 1.00 0.0 0 0 58.63 54.41
+                        Z"></path>
+                      <path fill="#499c85" d="M 9.75 40.96
+                        Q 5.15 43.50 0.05 44.46
+                        L 0.00 36.94
+                        L 0.22 35.85
+                        A 1.00 1.00 0.0 0 1 1.71 35.19
+                        Q 5.99 37.71 9.75 40.96
+                        Z"></path>
+                      <path fill="#70dac0" d="M 21.32 36.20
+                        Q 22.66 37.82 24.05 39.44
+                        C 26.34 42.09 27.54 45.21 29.79 47.81
+                        C 30.64 48.79 36.74 55.42 32.50 55.79
+                        L 11.00 41.21
+                        Q 15.81 38.21 21.32 36.20
+                        Z"></path>
+                      <rect fill="#000000" x="43.75" y="36.77" width="5.00" height="9.74" rx="2.30"></rect>
+                      <path fill="#000000" d="M 58.50 36.79
+                        Q 62.43 36.88 62.46 40.67
+                        L 61.94 44.74
+                        Q 61.91 44.99 61.77 45.19
+                        C 60.02 47.68 57.53 46.71 56.86 44.07
+                        Q 55.85 40.04 58.50 36.79
+                        Z"></path>
+                      <path fill="#4dd1a0" d="M 9.75 40.96
+                        L 11.00 41.21
+                        L 32.50 55.79
+                        Q 34.11 56.98 43.10 62.62
+                        Q 44.74 63.65 52.39 69.30
+                        A 1.00 1.00 0.0 0 1 52.34 70.94
+                        Q 46.22 74.94 40.81 79.86
+                        L 11.19 80.00
+                        Q 12.51 79.61 11.57 78.67
+                        Q 5.99 73.11 1.70 65.70
+                        C 1.28 64.97 0.74 64.76 0.00 65.19
+                        L 0.05 44.46
+                        Q 5.15 43.50 9.75 40.96
+                        Z"></path>
+                      <path fill="#000000" d="M 46.91 54.39
+                        C 50.72 56.87 54.90 57.18 58.63 54.41
+                        A 1.00 1.00 0.0 0 1 59.41 54.23
+                        C 62.47 54.80 62.54 57.43 60.15 58.94
+                        Q 53.38 63.20 46.28 59.41
+                        C 43.88 58.13 42.37 55.52 46.04 54.28
+                        A 1.00 0.99 51.9 0 1 46.91 54.39
+                        Z"></path>
+                      <path fill="#43ce7c" d="M 11.19 80.00
+                        L 0.00 80.00
+                        L 0.00 65.19
+                        C 0.74 64.76 1.28 64.97 1.70 65.70
+                        Q 5.99 73.11 11.57 78.67
+                        Q 12.51 79.61 11.19 80.00
+                        Z"></path>
+                      </svg>
+                    </div>
+                    <div class="textp">
+                      <div class="text_m">CSS Theme Switch</div>
+                      <div class="text_s">Praashoo7</div>
+                    </div>
+                  </div>
+                  <div class="btns">
+                    <div class="likes">
+                      <svg class="likes_svg" viewBox="-2 0 105 92"><path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path></svg><span class="likes_text">22</span>
+                    </div>
+                    <div class="comments">
+                      <svg class="comments_svg" viewBox="-405.9 238 56.3 54.8" title="Comment"><path d="M-391 291.4c0 1.5 1.2 1.7 1.9 1.2 1.8-1.6 15.9-14.6 15.9-14.6h19.3c3.8 0 4.4-.8 4.4-4.5v-31.1c0-3.7-.8-4.5-4.4-4.5h-47.4c-3.6 0-4.4.9-4.4 4.5v31.1c0 3.7.7 4.4 4.4 4.4h10.4v13.5z"></path></svg><span class="comments_text">12</span>
+                    </div>
+                    <div class="views">
+                      <svg class="views_svg" viewBox="0 0 30.5 16.5" title="Views"><path d="M15.3 0C8.9 0 3.3 3.3 0 8.3c3.3 5 8.9 8.3 15.3 8.3s12-3.3 15.3-8.3C27.3 3.3 21.7 0 15.3 0zm0 14.5c-3.4 0-6.2-2.8-6.2-6.2C9 4.8 11.8 2 15.3 2c3.4 0 6.2 2.8 6.2 6.2 0 3.5-2.8 6.3-6.2 6.3z"></path></svg><span class="views_text">332</span>
+                    </div>
+                  </div>
+                </div>
+          </div>
+
+          <!-- box 3 -->
+            <div class="text-center text-gray-500 dark:text-gray-400">
+              <div class="main">
+                  <div class="cardp">
+                    <div class="fl">
+                      <div class="fullscreen">
+                        <svg viewBox="0 0 100 100" class="fullscreen_svg"><path d="M3.563-.004a3.573 3.573 0 0 0-3.527 4.09l-.004-.02v28.141c0 1.973 1.602 3.57 3.57 3.57s3.57-1.598 3.57-3.57V12.218v.004l22.461 22.461a3.571 3.571 0 0 0 6.093-2.527c0-.988-.398-1.879-1.047-2.523L12.218 7.172h19.989c1.973 0 3.57-1.602 3.57-3.57s-1.598-3.57-3.57-3.57H4.035a3.008 3.008 0 0 0-.473-.035zM96.333 0l-.398.035.02-.004h-28.16a3.569 3.569 0 0 0-3.57 3.57 3.569 3.569 0 0 0 3.57 3.57h19.989L65.323 29.632a3.555 3.555 0 0 0-1.047 2.523 3.571 3.571 0 0 0 6.093 2.527L92.83 12.221v19.985a3.569 3.569 0 0 0 3.57 3.57 3.569 3.569 0 0 0 3.57-3.57V4.034v.004a3.569 3.569 0 0 0-3.539-4.043l-.105.004zM3.548 64.23A3.573 3.573 0 0 0 .029 67.8v28.626-.004l.016.305-.004-.016.004.059v-.012l.039.289-.004-.023.023.121-.004-.023c.074.348.191.656.34.938l-.008-.02.055.098-.008-.02.148.242-.008-.012.055.082-.008-.012c.199.285.43.531.688.742l.008.008.031.027.004.004c.582.461 1.32.742 2.121.762h.004l.078.004h28.61a3.569 3.569 0 0 0 3.57-3.57 3.569 3.569 0 0 0-3.57-3.57H12.224l22.461-22.461a3.569 3.569 0 0 0-2.492-6.125l-.105.004h.008a3.562 3.562 0 0 0-2.453 1.074L7.182 87.778V67.793a3.571 3.571 0 0 0-3.57-3.57h-.055.004zm92.805 0a3.573 3.573 0 0 0-3.519 3.57v19.993-.004L70.373 65.328a3.553 3.553 0 0 0-2.559-1.082h-.004a3.573 3.573 0 0 0-3.566 3.57c0 1.004.414 1.91 1.082 2.555l22.461 22.461H67.802a3.57 3.57 0 1 0 0 7.14h28.606c.375 0 .742-.059 1.082-.168l-.023.008.027-.012-.02.008.352-.129-.023.008.039-.02-.02.008.32-.156-.02.008.023-.016-.008.008c.184-.102.34-.207.488-.32l-.008.008.137-.113-.008.004.223-.211.008-.008c.156-.164.301-.34.422-.535l.008-.016-.008.016.008-.02.164-.285.008-.02-.008.016.008-.02c.098-.188.184-.406.246-.633l.008-.023-.004.008.008-.023a3.44 3.44 0 0 0 .121-.852v-.004l.004-.078V67.804a3.569 3.569 0 0 0-3.57-3.57h-.055.004z"></path></svg>
+                      </div>
+                    </div>
+                    <div class="card_content">
+                      <label class="switch_738">
+                        <input type="checkbox" class="chk_738">
+                        <span class="slider_738"></span>
+                      </label>
+                    </div>
+                    <div class="card_back"></div>
+                  </div>
+                  <div class="data">
+                    <div class="img">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 80 80">
+                      <g stroke-width="2.00" fill="none" stroke-linecap="butt">
+                      <path stroke="#59afb1" d="M 14.06 0.00
+                        Q 13.33 4.09 13.93 7.52
+                        A 1.04 1.02 -78.7 0 0 14.37 8.19
+                        L 32.87 20.19"></path>
+                      <path stroke="#4fa6a8" d="M 32.87 20.19
+                        L 42.25 26.79"></path>
+                      <path stroke="#69cbc0" d="M 42.25 26.79
+                        C 41.40 28.26 24.14 34.92 21.32 36.20"></path>
+                      <path stroke="#6fcdbb" d="M 21.32 36.20
+                        Q 15.81 38.21 11.00 41.21"></path>
+                      <path stroke="#5ec8ab" d="M 11.00 41.21
+                        L 9.75 40.96"></path>
+                      <path stroke="#5cae9e" d="M 9.75 40.96
+                        Q 5.99 37.71 1.71 35.19
+                        A 1.00 1.00 0.0 0 0 0.22 35.85
+                        L 0.00 36.94"></path>
+                      <path stroke="#3190a6" d="M 79.95 6.12
+                        L 62.46 11.32"></path>
+                      <path stroke="#3a96a3" d="M 62.46 11.32
+                        Q 47.42 14.67 32.87 20.19"></path>
+                      <path stroke="#22a3be" d="M 80.00 11.06
+                        L 64.50 17.46"></path>
+                      <path stroke="#28879d" d="M 64.50 17.46
+                        L 62.46 11.32"></path>
+                      <path stroke="#2ba9bb" d="M 64.50 17.46
+                        L 43.00 26.96"></path>
+                      <path stroke="#4ab2b2" d="M 43.00 26.96
+                        L 42.25 26.79"></path>
+                      <path stroke="#45ced3" d="M 80.00 52.31
+                        Q 71.64 45.91 62.46 40.67"></path>
+                      <path stroke="#13636e" d="M 62.46 40.67
+                        Q 62.43 36.88 58.50 36.79"></path>
+                      <path stroke="#45ced3" d="M 58.50 36.79
+                        Q 50.07 32.95 43.00 26.96"></path>
+                      <path stroke="#326b65" d="M 58.50 36.79
+                        Q 55.85 40.04 56.86 44.07
+                        C 57.53 46.71 60.02 47.68 61.77 45.19
+                        Q 61.91 44.99 61.94 44.74
+                        L 62.46 40.67"></path>
+                      <path stroke="#59d4b5" d="M 40.81 79.86
+                        Q 46.22 74.94 52.34 70.94
+                        A 1.00 1.00 0.0 0 0 52.39 69.30
+                        Q 44.74 63.65 43.10 62.62
+                        Q 34.11 56.98 32.50 55.79"></path>
+                      <path stroke="#6ad8c5" d="M 32.50 55.79
+                        C 36.74 55.42 30.64 48.79 29.79 47.81
+                        C 27.54 45.21 26.34 42.09 24.05 39.44
+                        Q 22.66 37.82 21.32 36.20"></path>
+                      <path stroke="#326b65" d="M 48.75 39.07
+                        A 2.30 2.30 0.0 0 0 46.45 36.77
+                        L 46.05 36.77
+                        A 2.30 2.30 0.0 0 0 43.75 39.07
+                        L 43.75 44.21
+                        A 2.30 2.30 0.0 0 0 46.05 46.51
+                        L 46.45 46.51
+                        A 2.30 2.30 0.0 0 0 48.75 44.21
+                        L 48.75 39.07"></path>
+                      <path stroke="#326b65" d="M 58.63 54.41
+                        C 54.90 57.18 50.72 56.87 46.91 54.39
+                        A 1.00 0.99 51.9 0 0 46.04 54.28
+                        C 42.37 55.52 43.88 58.13 46.28 59.41
+                        Q 53.38 63.20 60.15 58.94
+                        C 62.54 57.43 62.47 54.80 59.41 54.23
+                        A 1.00 1.00 0.0 0 0 58.63 54.41"></path>
+                      <path stroke="#4bb793" d="M 9.75 40.96
+                        Q 5.15 43.50 0.05 44.46"></path>
+                      <path stroke="#5fd6b0" d="M 32.50 55.79
+                        L 11.00 41.21"></path>
+                      <path stroke="#48d08e" d="M 11.19 80.00
+                        Q 12.51 79.61 11.57 78.67
+                        Q 5.99 73.11 1.70 65.70
+                        C 1.28 64.97 0.74 64.76 0.00 65.19"></path>
+                      </g>
+                      <path fill="#6ebfb6" d="M 0.00 0.00
+                        L 14.06 0.00
+                        Q 13.33 4.09 13.93 7.52
+                        A 1.04 1.02 -78.7 0 0 14.37 8.19
+                        L 32.87 20.19
+                        L 42.25 26.79
+                        C 41.40 28.26 24.14 34.92 21.32 36.20
+                        Q 15.81 38.21 11.00 41.21
+                        L 9.75 40.96
+                        Q 5.99 37.71 1.71 35.19
+                        A 1.00 1.00 0.0 0 0 0.22 35.85
+                        L 0.00 36.94
+                        L 0.00 0.00
+                        Z"></path>
+                      <path fill="#439eac" d="M 14.06 0.00
+                        L 80.00 0.00
+                        L 79.95 6.12
+                        L 62.46 11.32
+                        Q 47.42 14.67 32.87 20.19
+                        L 14.37 8.19
+                        A 1.04 1.02 -78.7 0 1 13.93 7.52
+                        Q 13.33 4.09 14.06 0.00
+                        Z"></path>
+                      <path fill="#1f81a0" d="M 79.95 6.12
+                        L 80.00 11.06
+                        L 64.50 17.46
+                        L 62.46 11.32
+                        L 79.95 6.12
+                        Z"></path>
+                      <path fill="#308d99" d="M 62.46 11.32
+                        L 64.50 17.46
+                        L 43.00 26.96
+                        L 42.25 26.79
+                        L 32.87 20.19
+                        Q 47.42 14.67 62.46 11.32
+                        Z"></path>
+                      <path fill="#25c5dc" d="M 80.00 11.06
+                        L 80.00 52.31
+                        Q 71.64 45.91 62.46 40.67
+                        Q 62.43 36.88 58.50 36.79
+                        Q 50.07 32.95 43.00 26.96
+                        L 64.50 17.46
+                        L 80.00 11.06
+                        Z"></path>
+                      <path fill="#64d6ca" d="M 42.25 26.79
+                        L 43.00 26.96
+                        Q 50.07 32.95 58.50 36.79
+                        Q 55.85 40.04 56.86 44.07
+                        C 57.53 46.71 60.02 47.68 61.77 45.19
+                        Q 61.91 44.99 61.94 44.74
+                        L 62.46 40.67
+                        Q 71.64 45.91 80.00 52.31
+                        L 80.00 80.00
+                        L 40.81 79.86
+                        Q 46.22 74.94 52.34 70.94
+                        A 1.00 1.00 0.0 0 0 52.39 69.30
+                        Q 44.74 63.65 43.10 62.62
+                        Q 34.11 56.98 32.50 55.79
+                        C 36.74 55.42 30.64 48.79 29.79 47.81
+                        C 27.54 45.21 26.34 42.09 24.05 39.44
+                        Q 22.66 37.82 21.32 36.20
+                        C 24.14 34.92 41.40 28.26 42.25 26.79
+                        Z
+                        M 48.75 39.07
+                        A 2.30 2.30 0.0 0 0 46.45 36.77
+                        L 46.05 36.77
+                        A 2.30 2.30 0.0 0 0 43.75 39.07
+                        L 43.75 44.21
+                        A 2.30 2.30 0.0 0 0 46.05 46.51
+                        L 46.45 46.51
+                        A 2.30 2.30 0.0 0 0 48.75 44.21
+                        L 48.75 39.07
+                        Z
+                        M 58.63 54.41
+                        C 54.90 57.18 50.72 56.87 46.91 54.39
+                        A 1.00 0.99 51.9 0 0 46.04 54.28
+                        C 42.37 55.52 43.88 58.13 46.28 59.41
+                        Q 53.38 63.20 60.15 58.94
+                        C 62.54 57.43 62.47 54.80 59.41 54.23
+                        A 1.00 1.00 0.0 0 0 58.63 54.41
+                        Z"></path>
+                      <path fill="#499c85" d="M 9.75 40.96
+                        Q 5.15 43.50 0.05 44.46
+                        L 0.00 36.94
+                        L 0.22 35.85
+                        A 1.00 1.00 0.0 0 1 1.71 35.19
+                        Q 5.99 37.71 9.75 40.96
+                        Z"></path>
+                      <path fill="#70dac0" d="M 21.32 36.20
+                        Q 22.66 37.82 24.05 39.44
+                        C 26.34 42.09 27.54 45.21 29.79 47.81
+                        C 30.64 48.79 36.74 55.42 32.50 55.79
+                        L 11.00 41.21
+                        Q 15.81 38.21 21.32 36.20
+                        Z"></path>
+                      <rect fill="#000000" x="43.75" y="36.77" width="5.00" height="9.74" rx="2.30"></rect>
+                      <path fill="#000000" d="M 58.50 36.79
+                        Q 62.43 36.88 62.46 40.67
+                        L 61.94 44.74
+                        Q 61.91 44.99 61.77 45.19
+                        C 60.02 47.68 57.53 46.71 56.86 44.07
+                        Q 55.85 40.04 58.50 36.79
+                        Z"></path>
+                      <path fill="#4dd1a0" d="M 9.75 40.96
+                        L 11.00 41.21
+                        L 32.50 55.79
+                        Q 34.11 56.98 43.10 62.62
+                        Q 44.74 63.65 52.39 69.30
+                        A 1.00 1.00 0.0 0 1 52.34 70.94
+                        Q 46.22 74.94 40.81 79.86
+                        L 11.19 80.00
+                        Q 12.51 79.61 11.57 78.67
+                        Q 5.99 73.11 1.70 65.70
+                        C 1.28 64.97 0.74 64.76 0.00 65.19
+                        L 0.05 44.46
+                        Q 5.15 43.50 9.75 40.96
+                        Z"></path>
+                      <path fill="#000000" d="M 46.91 54.39
+                        C 50.72 56.87 54.90 57.18 58.63 54.41
+                        A 1.00 1.00 0.0 0 1 59.41 54.23
+                        C 62.47 54.80 62.54 57.43 60.15 58.94
+                        Q 53.38 63.20 46.28 59.41
+                        C 43.88 58.13 42.37 55.52 46.04 54.28
+                        A 1.00 0.99 51.9 0 1 46.91 54.39
+                        Z"></path>
+                      <path fill="#43ce7c" d="M 11.19 80.00
+                        L 0.00 80.00
+                        L 0.00 65.19
+                        C 0.74 64.76 1.28 64.97 1.70 65.70
+                        Q 5.99 73.11 11.57 78.67
+                        Q 12.51 79.61 11.19 80.00
+                        Z"></path>
+                      </svg>
+                    </div>
+                    <div class="textp">
+                      <div class="text_m">CSS Theme Switch</div>
+                      <div class="text_s">Praashoo7</div>
+                    </div>
+                  </div>
+                  <div class="btns">
+                    <div class="likes">
+                      <svg class="likes_svg" viewBox="-2 0 105 92"><path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path></svg><span class="likes_text">22</span>
+                    </div>
+                    <div class="comments">
+                      <svg class="comments_svg" viewBox="-405.9 238 56.3 54.8" title="Comment"><path d="M-391 291.4c0 1.5 1.2 1.7 1.9 1.2 1.8-1.6 15.9-14.6 15.9-14.6h19.3c3.8 0 4.4-.8 4.4-4.5v-31.1c0-3.7-.8-4.5-4.4-4.5h-47.4c-3.6 0-4.4.9-4.4 4.5v31.1c0 3.7.7 4.4 4.4 4.4h10.4v13.5z"></path></svg><span class="comments_text">12</span>
+                    </div>
+                    <div class="views">
+                      <svg class="views_svg" viewBox="0 0 30.5 16.5" title="Views"><path d="M15.3 0C8.9 0 3.3 3.3 0 8.3c3.3 5 8.9 8.3 15.3 8.3s12-3.3 15.3-8.3C27.3 3.3 21.7 0 15.3 0zm0 14.5c-3.4 0-6.2-2.8-6.2-6.2C9 4.8 11.8 2 15.3 2c3.4 0 6.2 2.8 6.2 6.2 0 3.5-2.8 6.3-6.2 6.3z"></path></svg><span class="views_text">332</span>
+                    </div>
+                  </div>
+                </div>
+          </div>
+
+          <!-- box 4  -->
+            <div class="text-center text-gray-500 dark:text-gray-400">
+              <div class="main">
+                  <div class="cardp">
+                    <div class="fl">
+                      <div class="fullscreen">
+                        <svg viewBox="0 0 100 100" class="fullscreen_svg"><path d="M3.563-.004a3.573 3.573 0 0 0-3.527 4.09l-.004-.02v28.141c0 1.973 1.602 3.57 3.57 3.57s3.57-1.598 3.57-3.57V12.218v.004l22.461 22.461a3.571 3.571 0 0 0 6.093-2.527c0-.988-.398-1.879-1.047-2.523L12.218 7.172h19.989c1.973 0 3.57-1.602 3.57-3.57s-1.598-3.57-3.57-3.57H4.035a3.008 3.008 0 0 0-.473-.035zM96.333 0l-.398.035.02-.004h-28.16a3.569 3.569 0 0 0-3.57 3.57 3.569 3.569 0 0 0 3.57 3.57h19.989L65.323 29.632a3.555 3.555 0 0 0-1.047 2.523 3.571 3.571 0 0 0 6.093 2.527L92.83 12.221v19.985a3.569 3.569 0 0 0 3.57 3.57 3.569 3.569 0 0 0 3.57-3.57V4.034v.004a3.569 3.569 0 0 0-3.539-4.043l-.105.004zM3.548 64.23A3.573 3.573 0 0 0 .029 67.8v28.626-.004l.016.305-.004-.016.004.059v-.012l.039.289-.004-.023.023.121-.004-.023c.074.348.191.656.34.938l-.008-.02.055.098-.008-.02.148.242-.008-.012.055.082-.008-.012c.199.285.43.531.688.742l.008.008.031.027.004.004c.582.461 1.32.742 2.121.762h.004l.078.004h28.61a3.569 3.569 0 0 0 3.57-3.57 3.569 3.569 0 0 0-3.57-3.57H12.224l22.461-22.461a3.569 3.569 0 0 0-2.492-6.125l-.105.004h.008a3.562 3.562 0 0 0-2.453 1.074L7.182 87.778V67.793a3.571 3.571 0 0 0-3.57-3.57h-.055.004zm92.805 0a3.573 3.573 0 0 0-3.519 3.57v19.993-.004L70.373 65.328a3.553 3.553 0 0 0-2.559-1.082h-.004a3.573 3.573 0 0 0-3.566 3.57c0 1.004.414 1.91 1.082 2.555l22.461 22.461H67.802a3.57 3.57 0 1 0 0 7.14h28.606c.375 0 .742-.059 1.082-.168l-.023.008.027-.012-.02.008.352-.129-.023.008.039-.02-.02.008.32-.156-.02.008.023-.016-.008.008c.184-.102.34-.207.488-.32l-.008.008.137-.113-.008.004.223-.211.008-.008c.156-.164.301-.34.422-.535l.008-.016-.008.016.008-.02.164-.285.008-.02-.008.016.008-.02c.098-.188.184-.406.246-.633l.008-.023-.004.008.008-.023a3.44 3.44 0 0 0 .121-.852v-.004l.004-.078V67.804a3.569 3.569 0 0 0-3.57-3.57h-.055.004z"></path></svg>
+                      </div>
+                    </div>
+                    <div class="card_content">
+                      <label class="switch_738">
+                        <input type="checkbox" class="chk_738">
+                        <span class="slider_738"></span>
+                      </label>
+                    </div>
+                    <div class="card_back"></div>
+                  </div>
+                  <div class="data">
+                    <div class="img">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 80 80">
+                      <g stroke-width="2.00" fill="none" stroke-linecap="butt">
+                      <path stroke="#59afb1" d="M 14.06 0.00
+                        Q 13.33 4.09 13.93 7.52
+                        A 1.04 1.02 -78.7 0 0 14.37 8.19
+                        L 32.87 20.19"></path>
+                      <path stroke="#4fa6a8" d="M 32.87 20.19
+                        L 42.25 26.79"></path>
+                      <path stroke="#69cbc0" d="M 42.25 26.79
+                        C 41.40 28.26 24.14 34.92 21.32 36.20"></path>
+                      <path stroke="#6fcdbb" d="M 21.32 36.20
+                        Q 15.81 38.21 11.00 41.21"></path>
+                      <path stroke="#5ec8ab" d="M 11.00 41.21
+                        L 9.75 40.96"></path>
+                      <path stroke="#5cae9e" d="M 9.75 40.96
+                        Q 5.99 37.71 1.71 35.19
+                        A 1.00 1.00 0.0 0 0 0.22 35.85
+                        L 0.00 36.94"></path>
+                      <path stroke="#3190a6" d="M 79.95 6.12
+                        L 62.46 11.32"></path>
+                      <path stroke="#3a96a3" d="M 62.46 11.32
+                        Q 47.42 14.67 32.87 20.19"></path>
+                      <path stroke="#22a3be" d="M 80.00 11.06
+                        L 64.50 17.46"></path>
+                      <path stroke="#28879d" d="M 64.50 17.46
+                        L 62.46 11.32"></path>
+                      <path stroke="#2ba9bb" d="M 64.50 17.46
+                        L 43.00 26.96"></path>
+                      <path stroke="#4ab2b2" d="M 43.00 26.96
+                        L 42.25 26.79"></path>
+                      <path stroke="#45ced3" d="M 80.00 52.31
+                        Q 71.64 45.91 62.46 40.67"></path>
+                      <path stroke="#13636e" d="M 62.46 40.67
+                        Q 62.43 36.88 58.50 36.79"></path>
+                      <path stroke="#45ced3" d="M 58.50 36.79
+                        Q 50.07 32.95 43.00 26.96"></path>
+                      <path stroke="#326b65" d="M 58.50 36.79
+                        Q 55.85 40.04 56.86 44.07
+                        C 57.53 46.71 60.02 47.68 61.77 45.19
+                        Q 61.91 44.99 61.94 44.74
+                        L 62.46 40.67"></path>
+                      <path stroke="#59d4b5" d="M 40.81 79.86
+                        Q 46.22 74.94 52.34 70.94
+                        A 1.00 1.00 0.0 0 0 52.39 69.30
+                        Q 44.74 63.65 43.10 62.62
+                        Q 34.11 56.98 32.50 55.79"></path>
+                      <path stroke="#6ad8c5" d="M 32.50 55.79
+                        C 36.74 55.42 30.64 48.79 29.79 47.81
+                        C 27.54 45.21 26.34 42.09 24.05 39.44
+                        Q 22.66 37.82 21.32 36.20"></path>
+                      <path stroke="#326b65" d="M 48.75 39.07
+                        A 2.30 2.30 0.0 0 0 46.45 36.77
+                        L 46.05 36.77
+                        A 2.30 2.30 0.0 0 0 43.75 39.07
+                        L 43.75 44.21
+                        A 2.30 2.30 0.0 0 0 46.05 46.51
+                        L 46.45 46.51
+                        A 2.30 2.30 0.0 0 0 48.75 44.21
+                        L 48.75 39.07"></path>
+                      <path stroke="#326b65" d="M 58.63 54.41
+                        C 54.90 57.18 50.72 56.87 46.91 54.39
+                        A 1.00 0.99 51.9 0 0 46.04 54.28
+                        C 42.37 55.52 43.88 58.13 46.28 59.41
+                        Q 53.38 63.20 60.15 58.94
+                        C 62.54 57.43 62.47 54.80 59.41 54.23
+                        A 1.00 1.00 0.0 0 0 58.63 54.41"></path>
+                      <path stroke="#4bb793" d="M 9.75 40.96
+                        Q 5.15 43.50 0.05 44.46"></path>
+                      <path stroke="#5fd6b0" d="M 32.50 55.79
+                        L 11.00 41.21"></path>
+                      <path stroke="#48d08e" d="M 11.19 80.00
+                        Q 12.51 79.61 11.57 78.67
+                        Q 5.99 73.11 1.70 65.70
+                        C 1.28 64.97 0.74 64.76 0.00 65.19"></path>
+                      </g>
+                      <path fill="#6ebfb6" d="M 0.00 0.00
+                        L 14.06 0.00
+                        Q 13.33 4.09 13.93 7.52
+                        A 1.04 1.02 -78.7 0 0 14.37 8.19
+                        L 32.87 20.19
+                        L 42.25 26.79
+                        C 41.40 28.26 24.14 34.92 21.32 36.20
+                        Q 15.81 38.21 11.00 41.21
+                        L 9.75 40.96
+                        Q 5.99 37.71 1.71 35.19
+                        A 1.00 1.00 0.0 0 0 0.22 35.85
+                        L 0.00 36.94
+                        L 0.00 0.00
+                        Z"></path>
+                      <path fill="#439eac" d="M 14.06 0.00
+                        L 80.00 0.00
+                        L 79.95 6.12
+                        L 62.46 11.32
+                        Q 47.42 14.67 32.87 20.19
+                        L 14.37 8.19
+                        A 1.04 1.02 -78.7 0 1 13.93 7.52
+                        Q 13.33 4.09 14.06 0.00
+                        Z"></path>
+                      <path fill="#1f81a0" d="M 79.95 6.12
+                        L 80.00 11.06
+                        L 64.50 17.46
+                        L 62.46 11.32
+                        L 79.95 6.12
+                        Z"></path>
+                      <path fill="#308d99" d="M 62.46 11.32
+                        L 64.50 17.46
+                        L 43.00 26.96
+                        L 42.25 26.79
+                        L 32.87 20.19
+                        Q 47.42 14.67 62.46 11.32
+                        Z"></path>
+                      <path fill="#25c5dc" d="M 80.00 11.06
+                        L 80.00 52.31
+                        Q 71.64 45.91 62.46 40.67
+                        Q 62.43 36.88 58.50 36.79
+                        Q 50.07 32.95 43.00 26.96
+                        L 64.50 17.46
+                        L 80.00 11.06
+                        Z"></path>
+                      <path fill="#64d6ca" d="M 42.25 26.79
+                        L 43.00 26.96
+                        Q 50.07 32.95 58.50 36.79
+                        Q 55.85 40.04 56.86 44.07
+                        C 57.53 46.71 60.02 47.68 61.77 45.19
+                        Q 61.91 44.99 61.94 44.74
+                        L 62.46 40.67
+                        Q 71.64 45.91 80.00 52.31
+                        L 80.00 80.00
+                        L 40.81 79.86
+                        Q 46.22 74.94 52.34 70.94
+                        A 1.00 1.00 0.0 0 0 52.39 69.30
+                        Q 44.74 63.65 43.10 62.62
+                        Q 34.11 56.98 32.50 55.79
+                        C 36.74 55.42 30.64 48.79 29.79 47.81
+                        C 27.54 45.21 26.34 42.09 24.05 39.44
+                        Q 22.66 37.82 21.32 36.20
+                        C 24.14 34.92 41.40 28.26 42.25 26.79
+                        Z
+                        M 48.75 39.07
+                        A 2.30 2.30 0.0 0 0 46.45 36.77
+                        L 46.05 36.77
+                        A 2.30 2.30 0.0 0 0 43.75 39.07
+                        L 43.75 44.21
+                        A 2.30 2.30 0.0 0 0 46.05 46.51
+                        L 46.45 46.51
+                        A 2.30 2.30 0.0 0 0 48.75 44.21
+                        L 48.75 39.07
+                        Z
+                        M 58.63 54.41
+                        C 54.90 57.18 50.72 56.87 46.91 54.39
+                        A 1.00 0.99 51.9 0 0 46.04 54.28
+                        C 42.37 55.52 43.88 58.13 46.28 59.41
+                        Q 53.38 63.20 60.15 58.94
+                        C 62.54 57.43 62.47 54.80 59.41 54.23
+                        A 1.00 1.00 0.0 0 0 58.63 54.41
+                        Z"></path>
+                      <path fill="#499c85" d="M 9.75 40.96
+                        Q 5.15 43.50 0.05 44.46
+                        L 0.00 36.94
+                        L 0.22 35.85
+                        A 1.00 1.00 0.0 0 1 1.71 35.19
+                        Q 5.99 37.71 9.75 40.96
+                        Z"></path>
+                      <path fill="#70dac0" d="M 21.32 36.20
+                        Q 22.66 37.82 24.05 39.44
+                        C 26.34 42.09 27.54 45.21 29.79 47.81
+                        C 30.64 48.79 36.74 55.42 32.50 55.79
+                        L 11.00 41.21
+                        Q 15.81 38.21 21.32 36.20
+                        Z"></path>
+                      <rect fill="#000000" x="43.75" y="36.77" width="5.00" height="9.74" rx="2.30"></rect>
+                      <path fill="#000000" d="M 58.50 36.79
+                        Q 62.43 36.88 62.46 40.67
+                        L 61.94 44.74
+                        Q 61.91 44.99 61.77 45.19
+                        C 60.02 47.68 57.53 46.71 56.86 44.07
+                        Q 55.85 40.04 58.50 36.79
+                        Z"></path>
+                      <path fill="#4dd1a0" d="M 9.75 40.96
+                        L 11.00 41.21
+                        L 32.50 55.79
+                        Q 34.11 56.98 43.10 62.62
+                        Q 44.74 63.65 52.39 69.30
+                        A 1.00 1.00 0.0 0 1 52.34 70.94
+                        Q 46.22 74.94 40.81 79.86
+                        L 11.19 80.00
+                        Q 12.51 79.61 11.57 78.67
+                        Q 5.99 73.11 1.70 65.70
+                        C 1.28 64.97 0.74 64.76 0.00 65.19
+                        L 0.05 44.46
+                        Q 5.15 43.50 9.75 40.96
+                        Z"></path>
+                      <path fill="#000000" d="M 46.91 54.39
+                        C 50.72 56.87 54.90 57.18 58.63 54.41
+                        A 1.00 1.00 0.0 0 1 59.41 54.23
+                        C 62.47 54.80 62.54 57.43 60.15 58.94
+                        Q 53.38 63.20 46.28 59.41
+                        C 43.88 58.13 42.37 55.52 46.04 54.28
+                        A 1.00 0.99 51.9 0 1 46.91 54.39
+                        Z"></path>
+                      <path fill="#43ce7c" d="M 11.19 80.00
+                        L 0.00 80.00
+                        L 0.00 65.19
+                        C 0.74 64.76 1.28 64.97 1.70 65.70
+                        Q 5.99 73.11 11.57 78.67
+                        Q 12.51 79.61 11.19 80.00
+                        Z"></path>
+                      </svg>
+                    </div>
+                    <div class="textp">
+                      <div class="text_m">CSS Theme Switch</div>
+                      <div class="text_s">Praashoo7</div>
+                    </div>
+                  </div>
+                  <div class="btns">
+                    <div class="likes">
+                      <svg class="likes_svg" viewBox="-2 0 105 92"><path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path></svg><span class="likes_text">22</span>
+                    </div>
+                    <div class="comments">
+                      <svg class="comments_svg" viewBox="-405.9 238 56.3 54.8" title="Comment"><path d="M-391 291.4c0 1.5 1.2 1.7 1.9 1.2 1.8-1.6 15.9-14.6 15.9-14.6h19.3c3.8 0 4.4-.8 4.4-4.5v-31.1c0-3.7-.8-4.5-4.4-4.5h-47.4c-3.6 0-4.4.9-4.4 4.5v31.1c0 3.7.7 4.4 4.4 4.4h10.4v13.5z"></path></svg><span class="comments_text">12</span>
+                    </div>
+                    <div class="views">
+                      <svg class="views_svg" viewBox="0 0 30.5 16.5" title="Views"><path d="M15.3 0C8.9 0 3.3 3.3 0 8.3c3.3 5 8.9 8.3 15.3 8.3s12-3.3 15.3-8.3C27.3 3.3 21.7 0 15.3 0zm0 14.5c-3.4 0-6.2-2.8-6.2-6.2C9 4.8 11.8 2 15.3 2c3.4 0 6.2 2.8 6.2 6.2 0 3.5-2.8 6.3-6.2 6.3z"></path></svg><span class="views_text">332</span>
+                    </div>
+                  </div>
+                </div>
+          </div>
+
+          <!-- box 5  -->
+            <div class="text-center text-gray-500 dark:text-gray-400">
+              <div class="main">
+                  <div class="cardp">
+                    <div class="fl">
+                      <div class="fullscreen">
+                        <svg viewBox="0 0 100 100" class="fullscreen_svg"><path d="M3.563-.004a3.573 3.573 0 0 0-3.527 4.09l-.004-.02v28.141c0 1.973 1.602 3.57 3.57 3.57s3.57-1.598 3.57-3.57V12.218v.004l22.461 22.461a3.571 3.571 0 0 0 6.093-2.527c0-.988-.398-1.879-1.047-2.523L12.218 7.172h19.989c1.973 0 3.57-1.602 3.57-3.57s-1.598-3.57-3.57-3.57H4.035a3.008 3.008 0 0 0-.473-.035zM96.333 0l-.398.035.02-.004h-28.16a3.569 3.569 0 0 0-3.57 3.57 3.569 3.569 0 0 0 3.57 3.57h19.989L65.323 29.632a3.555 3.555 0 0 0-1.047 2.523 3.571 3.571 0 0 0 6.093 2.527L92.83 12.221v19.985a3.569 3.569 0 0 0 3.57 3.57 3.569 3.569 0 0 0 3.57-3.57V4.034v.004a3.569 3.569 0 0 0-3.539-4.043l-.105.004zM3.548 64.23A3.573 3.573 0 0 0 .029 67.8v28.626-.004l.016.305-.004-.016.004.059v-.012l.039.289-.004-.023.023.121-.004-.023c.074.348.191.656.34.938l-.008-.02.055.098-.008-.02.148.242-.008-.012.055.082-.008-.012c.199.285.43.531.688.742l.008.008.031.027.004.004c.582.461 1.32.742 2.121.762h.004l.078.004h28.61a3.569 3.569 0 0 0 3.57-3.57 3.569 3.569 0 0 0-3.57-3.57H12.224l22.461-22.461a3.569 3.569 0 0 0-2.492-6.125l-.105.004h.008a3.562 3.562 0 0 0-2.453 1.074L7.182 87.778V67.793a3.571 3.571 0 0 0-3.57-3.57h-.055.004zm92.805 0a3.573 3.573 0 0 0-3.519 3.57v19.993-.004L70.373 65.328a3.553 3.553 0 0 0-2.559-1.082h-.004a3.573 3.573 0 0 0-3.566 3.57c0 1.004.414 1.91 1.082 2.555l22.461 22.461H67.802a3.57 3.57 0 1 0 0 7.14h28.606c.375 0 .742-.059 1.082-.168l-.023.008.027-.012-.02.008.352-.129-.023.008.039-.02-.02.008.32-.156-.02.008.023-.016-.008.008c.184-.102.34-.207.488-.32l-.008.008.137-.113-.008.004.223-.211.008-.008c.156-.164.301-.34.422-.535l.008-.016-.008.016.008-.02.164-.285.008-.02-.008.016.008-.02c.098-.188.184-.406.246-.633l.008-.023-.004.008.008-.023a3.44 3.44 0 0 0 .121-.852v-.004l.004-.078V67.804a3.569 3.569 0 0 0-3.57-3.57h-.055.004z"></path></svg>
+                      </div>
+                    </div>
+                    <div class="card_content">
+                      <label class="switch_738">
+                        <input type="checkbox" class="chk_738">
+                        <span class="slider_738"></span>
+                      </label>
+                    </div>
+                    <div class="card_back"></div>
+                  </div>
+                  <div class="data">
+                    <div class="img">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 80 80">
+                      <g stroke-width="2.00" fill="none" stroke-linecap="butt">
+                      <path stroke="#59afb1" d="M 14.06 0.00
+                        Q 13.33 4.09 13.93 7.52
+                        A 1.04 1.02 -78.7 0 0 14.37 8.19
+                        L 32.87 20.19"></path>
+                      <path stroke="#4fa6a8" d="M 32.87 20.19
+                        L 42.25 26.79"></path>
+                      <path stroke="#69cbc0" d="M 42.25 26.79
+                        C 41.40 28.26 24.14 34.92 21.32 36.20"></path>
+                      <path stroke="#6fcdbb" d="M 21.32 36.20
+                        Q 15.81 38.21 11.00 41.21"></path>
+                      <path stroke="#5ec8ab" d="M 11.00 41.21
+                        L 9.75 40.96"></path>
+                      <path stroke="#5cae9e" d="M 9.75 40.96
+                        Q 5.99 37.71 1.71 35.19
+                        A 1.00 1.00 0.0 0 0 0.22 35.85
+                        L 0.00 36.94"></path>
+                      <path stroke="#3190a6" d="M 79.95 6.12
+                        L 62.46 11.32"></path>
+                      <path stroke="#3a96a3" d="M 62.46 11.32
+                        Q 47.42 14.67 32.87 20.19"></path>
+                      <path stroke="#22a3be" d="M 80.00 11.06
+                        L 64.50 17.46"></path>
+                      <path stroke="#28879d" d="M 64.50 17.46
+                        L 62.46 11.32"></path>
+                      <path stroke="#2ba9bb" d="M 64.50 17.46
+                        L 43.00 26.96"></path>
+                      <path stroke="#4ab2b2" d="M 43.00 26.96
+                        L 42.25 26.79"></path>
+                      <path stroke="#45ced3" d="M 80.00 52.31
+                        Q 71.64 45.91 62.46 40.67"></path>
+                      <path stroke="#13636e" d="M 62.46 40.67
+                        Q 62.43 36.88 58.50 36.79"></path>
+                      <path stroke="#45ced3" d="M 58.50 36.79
+                        Q 50.07 32.95 43.00 26.96"></path>
+                      <path stroke="#326b65" d="M 58.50 36.79
+                        Q 55.85 40.04 56.86 44.07
+                        C 57.53 46.71 60.02 47.68 61.77 45.19
+                        Q 61.91 44.99 61.94 44.74
+                        L 62.46 40.67"></path>
+                      <path stroke="#59d4b5" d="M 40.81 79.86
+                        Q 46.22 74.94 52.34 70.94
+                        A 1.00 1.00 0.0 0 0 52.39 69.30
+                        Q 44.74 63.65 43.10 62.62
+                        Q 34.11 56.98 32.50 55.79"></path>
+                      <path stroke="#6ad8c5" d="M 32.50 55.79
+                        C 36.74 55.42 30.64 48.79 29.79 47.81
+                        C 27.54 45.21 26.34 42.09 24.05 39.44
+                        Q 22.66 37.82 21.32 36.20"></path>
+                      <path stroke="#326b65" d="M 48.75 39.07
+                        A 2.30 2.30 0.0 0 0 46.45 36.77
+                        L 46.05 36.77
+                        A 2.30 2.30 0.0 0 0 43.75 39.07
+                        L 43.75 44.21
+                        A 2.30 2.30 0.0 0 0 46.05 46.51
+                        L 46.45 46.51
+                        A 2.30 2.30 0.0 0 0 48.75 44.21
+                        L 48.75 39.07"></path>
+                      <path stroke="#326b65" d="M 58.63 54.41
+                        C 54.90 57.18 50.72 56.87 46.91 54.39
+                        A 1.00 0.99 51.9 0 0 46.04 54.28
+                        C 42.37 55.52 43.88 58.13 46.28 59.41
+                        Q 53.38 63.20 60.15 58.94
+                        C 62.54 57.43 62.47 54.80 59.41 54.23
+                        A 1.00 1.00 0.0 0 0 58.63 54.41"></path>
+                      <path stroke="#4bb793" d="M 9.75 40.96
+                        Q 5.15 43.50 0.05 44.46"></path>
+                      <path stroke="#5fd6b0" d="M 32.50 55.79
+                        L 11.00 41.21"></path>
+                      <path stroke="#48d08e" d="M 11.19 80.00
+                        Q 12.51 79.61 11.57 78.67
+                        Q 5.99 73.11 1.70 65.70
+                        C 1.28 64.97 0.74 64.76 0.00 65.19"></path>
+                      </g>
+                      <path fill="#6ebfb6" d="M 0.00 0.00
+                        L 14.06 0.00
+                        Q 13.33 4.09 13.93 7.52
+                        A 1.04 1.02 -78.7 0 0 14.37 8.19
+                        L 32.87 20.19
+                        L 42.25 26.79
+                        C 41.40 28.26 24.14 34.92 21.32 36.20
+                        Q 15.81 38.21 11.00 41.21
+                        L 9.75 40.96
+                        Q 5.99 37.71 1.71 35.19
+                        A 1.00 1.00 0.0 0 0 0.22 35.85
+                        L 0.00 36.94
+                        L 0.00 0.00
+                        Z"></path>
+                      <path fill="#439eac" d="M 14.06 0.00
+                        L 80.00 0.00
+                        L 79.95 6.12
+                        L 62.46 11.32
+                        Q 47.42 14.67 32.87 20.19
+                        L 14.37 8.19
+                        A 1.04 1.02 -78.7 0 1 13.93 7.52
+                        Q 13.33 4.09 14.06 0.00
+                        Z"></path>
+                      <path fill="#1f81a0" d="M 79.95 6.12
+                        L 80.00 11.06
+                        L 64.50 17.46
+                        L 62.46 11.32
+                        L 79.95 6.12
+                        Z"></path>
+                      <path fill="#308d99" d="M 62.46 11.32
+                        L 64.50 17.46
+                        L 43.00 26.96
+                        L 42.25 26.79
+                        L 32.87 20.19
+                        Q 47.42 14.67 62.46 11.32
+                        Z"></path>
+                      <path fill="#25c5dc" d="M 80.00 11.06
+                        L 80.00 52.31
+                        Q 71.64 45.91 62.46 40.67
+                        Q 62.43 36.88 58.50 36.79
+                        Q 50.07 32.95 43.00 26.96
+                        L 64.50 17.46
+                        L 80.00 11.06
+                        Z"></path>
+                      <path fill="#64d6ca" d="M 42.25 26.79
+                        L 43.00 26.96
+                        Q 50.07 32.95 58.50 36.79
+                        Q 55.85 40.04 56.86 44.07
+                        C 57.53 46.71 60.02 47.68 61.77 45.19
+                        Q 61.91 44.99 61.94 44.74
+                        L 62.46 40.67
+                        Q 71.64 45.91 80.00 52.31
+                        L 80.00 80.00
+                        L 40.81 79.86
+                        Q 46.22 74.94 52.34 70.94
+                        A 1.00 1.00 0.0 0 0 52.39 69.30
+                        Q 44.74 63.65 43.10 62.62
+                        Q 34.11 56.98 32.50 55.79
+                        C 36.74 55.42 30.64 48.79 29.79 47.81
+                        C 27.54 45.21 26.34 42.09 24.05 39.44
+                        Q 22.66 37.82 21.32 36.20
+                        C 24.14 34.92 41.40 28.26 42.25 26.79
+                        Z
+                        M 48.75 39.07
+                        A 2.30 2.30 0.0 0 0 46.45 36.77
+                        L 46.05 36.77
+                        A 2.30 2.30 0.0 0 0 43.75 39.07
+                        L 43.75 44.21
+                        A 2.30 2.30 0.0 0 0 46.05 46.51
+                        L 46.45 46.51
+                        A 2.30 2.30 0.0 0 0 48.75 44.21
+                        L 48.75 39.07
+                        Z
+                        M 58.63 54.41
+                        C 54.90 57.18 50.72 56.87 46.91 54.39
+                        A 1.00 0.99 51.9 0 0 46.04 54.28
+                        C 42.37 55.52 43.88 58.13 46.28 59.41
+                        Q 53.38 63.20 60.15 58.94
+                        C 62.54 57.43 62.47 54.80 59.41 54.23
+                        A 1.00 1.00 0.0 0 0 58.63 54.41
+                        Z"></path>
+                      <path fill="#499c85" d="M 9.75 40.96
+                        Q 5.15 43.50 0.05 44.46
+                        L 0.00 36.94
+                        L 0.22 35.85
+                        A 1.00 1.00 0.0 0 1 1.71 35.19
+                        Q 5.99 37.71 9.75 40.96
+                        Z"></path>
+                      <path fill="#70dac0" d="M 21.32 36.20
+                        Q 22.66 37.82 24.05 39.44
+                        C 26.34 42.09 27.54 45.21 29.79 47.81
+                        C 30.64 48.79 36.74 55.42 32.50 55.79
+                        L 11.00 41.21
+                        Q 15.81 38.21 21.32 36.20
+                        Z"></path>
+                      <rect fill="#000000" x="43.75" y="36.77" width="5.00" height="9.74" rx="2.30"></rect>
+                      <path fill="#000000" d="M 58.50 36.79
+                        Q 62.43 36.88 62.46 40.67
+                        L 61.94 44.74
+                        Q 61.91 44.99 61.77 45.19
+                        C 60.02 47.68 57.53 46.71 56.86 44.07
+                        Q 55.85 40.04 58.50 36.79
+                        Z"></path>
+                      <path fill="#4dd1a0" d="M 9.75 40.96
+                        L 11.00 41.21
+                        L 32.50 55.79
+                        Q 34.11 56.98 43.10 62.62
+                        Q 44.74 63.65 52.39 69.30
+                        A 1.00 1.00 0.0 0 1 52.34 70.94
+                        Q 46.22 74.94 40.81 79.86
+                        L 11.19 80.00
+                        Q 12.51 79.61 11.57 78.67
+                        Q 5.99 73.11 1.70 65.70
+                        C 1.28 64.97 0.74 64.76 0.00 65.19
+                        L 0.05 44.46
+                        Q 5.15 43.50 9.75 40.96
+                        Z"></path>
+                      <path fill="#000000" d="M 46.91 54.39
+                        C 50.72 56.87 54.90 57.18 58.63 54.41
+                        A 1.00 1.00 0.0 0 1 59.41 54.23
+                        C 62.47 54.80 62.54 57.43 60.15 58.94
+                        Q 53.38 63.20 46.28 59.41
+                        C 43.88 58.13 42.37 55.52 46.04 54.28
+                        A 1.00 0.99 51.9 0 1 46.91 54.39
+                        Z"></path>
+                      <path fill="#43ce7c" d="M 11.19 80.00
+                        L 0.00 80.00
+                        L 0.00 65.19
+                        C 0.74 64.76 1.28 64.97 1.70 65.70
+                        Q 5.99 73.11 11.57 78.67
+                        Q 12.51 79.61 11.19 80.00
+                        Z"></path>
+                      </svg>
+                    </div>
+                    <div class="textp">
+                      <div class="text_m">CSS Theme Switch</div>
+                      <div class="text_s">Praashoo7</div>
+                    </div>
+                  </div>
+                  <div class="btns">
+                    <div class="likes">
+                      <svg class="likes_svg" viewBox="-2 0 105 92"><path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path></svg><span class="likes_text">22</span>
+                    </div>
+                    <div class="comments">
+                      <svg class="comments_svg" viewBox="-405.9 238 56.3 54.8" title="Comment"><path d="M-391 291.4c0 1.5 1.2 1.7 1.9 1.2 1.8-1.6 15.9-14.6 15.9-14.6h19.3c3.8 0 4.4-.8 4.4-4.5v-31.1c0-3.7-.8-4.5-4.4-4.5h-47.4c-3.6 0-4.4.9-4.4 4.5v31.1c0 3.7.7 4.4 4.4 4.4h10.4v13.5z"></path></svg><span class="comments_text">12</span>
+                    </div>
+                    <div class="views">
+                      <svg class="views_svg" viewBox="0 0 30.5 16.5" title="Views"><path d="M15.3 0C8.9 0 3.3 3.3 0 8.3c3.3 5 8.9 8.3 15.3 8.3s12-3.3 15.3-8.3C27.3 3.3 21.7 0 15.3 0zm0 14.5c-3.4 0-6.2-2.8-6.2-6.2C9 4.8 11.8 2 15.3 2c3.4 0 6.2 2.8 6.2 6.2 0 3.5-2.8 6.3-6.2 6.3z"></path></svg><span class="views_text">332</span>
+                    </div>
+                  </div>
+                </div>
+          </div>
+
+          </div>
+      </section>
+  </div>
+  
+    <!-- projects end  -->
+
+    <!-- contact  -->
+    <div id="contact" class="h-full pt-[69px]">
+      <section class="bg-white dark:bg-gray-900">
+          <div class="max-w-screen-md px-4 py-8 mx-auto lg:py-16 delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset="300">
+              <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-center text-gray-900 dark:text-white">Contact Us</h2>
+              <p class="mb-8 font-light text-center text-gray-500 lg:mb-16 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about my websites? Need details? Do you want to hire me Let us know.</p>
+              <form action="#" class="space-y-8">
+                  <div>
+                      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                      <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@gmail.com" required>
+                  </div>
+                  <div>
+                      <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                      <input type="text" id="subject" class="block w-full p-3 text-sm text-gray-900 border border-gray-300 rounded-lg shadow-sm bg-gray-50 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required>
+                  </div>
+                  <div class="sm:col-span-2">
+                      <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                      <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+                  </div>
+                  <button type="submit" class="px-5 py-3 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
+              </form>
+          </div>
+        </section>
+  </div>
+  
+    <!-- contact end  -->
 
     <footer class="bg-gray-800">
       <div class="max-w-screen-xl px-4 py-5 mx-auto sm:px-6 lg:px-8">
@@ -672,4 +2111,5 @@
   
     
 </body>
+<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 </html>

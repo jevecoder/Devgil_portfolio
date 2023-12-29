@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .card {
     width: 190px;
     height: 254px;
@@ -859,7 +860,7 @@ ul.skills li.more input:checked + label:hover {
     overflow: hidden;
   }
 
-  .text {
+  .textp {
     display: flex;
     justify-content: center;
     flex-direction: column;
